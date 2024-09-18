@@ -11,7 +11,7 @@ spec:
     chart: prometheus
     targetRevision: 25.27.0
     helm:
-      valuesFiles:
+      valueFiles:
         - values/prometheus-values.yaml
   destination:
     server: https://kubernetes.default.svc
