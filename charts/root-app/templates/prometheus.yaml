@@ -12,7 +12,7 @@ spec:
     targetRevision: 25.27.0
     helm:
       valueFiles:
-        - prometheus-values.yaml
+        - https://github.com/dainetech/argocd/blob/main/charts/root-app/templates/values/prometheus-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
