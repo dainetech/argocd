@@ -11,9 +11,8 @@ spec:
     chart: prometheus
     targetRevision: 25.27.0
     helm:
-      values: |
-        pushgateway:
-          enabled: false
+      valuesFiles:
+        - ../templates/values/prometheus.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
