@@ -14,6 +14,7 @@ spec:
       valueFiles:
       - $values/charts/root-app/values/prometheus-values.yaml
   - repoURL: https://github.com/dainetech/argocd.git
+    targetRevision: dev
     ref: values
   destination:
     server: https://kubernetes.default.svc
