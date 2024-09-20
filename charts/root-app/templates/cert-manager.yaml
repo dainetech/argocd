@@ -8,7 +8,7 @@ spec:
   project: default
   sources:
     chart: cert-manager
-    repoURL: https://charts.jetstack.io
+  - repoURL: https://charts.jetstack.io
     targetRevision: 1.15.3
     helm:
       valueFiles:
@@ -17,8 +17,8 @@ spec:
     targetRevision: HEAD
     ref: values
   destination:
-    namespace: cert-manager
     server: https://kubernetes.default.svc
+    namespace: cert-manager
   syncPolicy:
     automated:
       prune: true
