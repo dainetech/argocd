@@ -6,10 +6,16 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  source:
-    repoURL: https://grafana.github.io/helm-charts
+  sources:
+  - repoURL: https://grafana.github.io/helm-charts
     chart: grafana
     targetRevision: 8.5.1
+    helm:
+    valueFiles:
+    - $values/charts/grafana/values.yaml
+  - repoURL: https://github.com/dainetech/argocd.git
+    targetRevision: HEAD
+    ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: monitor
