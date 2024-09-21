@@ -748,10 +748,10 @@ dashboards:
       file: dashboards/custom-dashboard.json
       labels:
         grafana_dashboard: "1"
-  #   prometheus-stats:
-  #     gnetId: 2
-  #     revision: 2
-  #     datasource: Prometheus
+    prometheus-stats:
+      gnetId: 2
+      revision: 2
+      datasource: Prometheus
   #   local-dashboard:
   #     url: https://example.com/repository/test.json
   #     token: ''
