@@ -746,6 +746,8 @@ dashboards:
   #     json: |
     custom-dashboard:
       file: dashboards/custom-dashboard.json
+      labels:
+        grafana_dashboard: "1"
   #   prometheus-stats:
   #     gnetId: 2
   #     revision: 2
