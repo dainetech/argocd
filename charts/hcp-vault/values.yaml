@@ -1,6 +1,12 @@
 global:
   enabled: true
   namespace: "vault"
+server:
+  dev:
+    enabled: true
+    devRootToken: "root"
+  standalone:
+    enabled: true
 injector:
   enabled: true
   replicas: 1
