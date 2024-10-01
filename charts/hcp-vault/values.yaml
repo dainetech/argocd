@@ -1,6 +1,24 @@
 global:
   enabled: true
   namespace: "vault"
+injector:
+  enabled: true
+  replicas: 1
+  port: 8090
+  leaderElector:
+    enabled: true
+  image:
+    repository: "hashicorp/vault-k8s"
+    tag: "1.4.2"
+    pullPolicy: IfNotPresent
+  agentImage:
+    repository: "hashicorp/vault"
+    tag: "1.17.3"
+  agentDefaults:
+    cpuLimit: "500m"
+    cpuRequest: "250m"
+    memLimit: "128Mi"
+    memRequest: "64Mi"
 ui:
   enabled: true
   publishNotReadyAddresses: true
