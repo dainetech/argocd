@@ -1,0 +1,6 @@
+cloudflare:
+  tunnel_token: "eyJhIjoiNTJkZWUwNWIwZDYzYThjNDk4ZjRjNThkMDk2ZWVlZjAiLCJ0IjoiZWNlZTdiMWEtMTQzNC00OTc1LWJiYTAtOTc5YzdjYWZiY2ZmIiwicyI6IllqaGlNMlV6TVRFdE5UTmxNaTAwT1dOakxUZzFPV010WVRNME9EUXpNamt5WVROayJ9"
+image:
+  repository: cloudflare/cloudflared
+  pullPolicy: IfNotPresent
+replicaCount: 1
