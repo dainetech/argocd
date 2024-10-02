@@ -7,6 +7,8 @@ server:
     devRootToken: "root"
   standalone:
     enabled: true
+injector:
+  enabled: false
 ui:
   enabled: true
   publishNotReadyAddresses: true
