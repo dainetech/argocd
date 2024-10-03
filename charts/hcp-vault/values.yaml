@@ -1,6 +1,6 @@
 global:
   enabled: true
-  namespace: "vault"
+  namespace: "default"
 server:
   dev:
     enabled: true
