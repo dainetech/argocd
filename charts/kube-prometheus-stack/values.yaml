@@ -72,7 +72,7 @@ defaultRules:
     k8sContainerMemoryRss: true
     k8sContainerMemorySwap: true
     k8sContainerResource: true
-    k8sContainerMemoryWorkingSetBytes: true
+    k8sContainerMemoryWorkingSetBytes: false
     k8sPodOwner: false
     kubeApiserverAvailability: true
     kubeApiserverBurnrate: true
