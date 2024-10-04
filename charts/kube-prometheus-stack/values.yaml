@@ -146,7 +146,7 @@ alertmanager:
   config:
     global:
       resolve_timeout: 1m
-      slack_api_url: https://hooks.slack.com/services/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
+      slack_api_url: 'https://hooks.slack.com/services/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'
 
     route:
       receiver: 'slack-notifications'
@@ -157,6 +157,7 @@ alertmanager:
       slack_configs:
       - channel: '#infra-alerts'
         send_resolved: true
+        api_url: 'https://hooks.slack.com/services/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'
 
 kubeControllerManager:
   enabled: false
