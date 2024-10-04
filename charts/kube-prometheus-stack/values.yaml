@@ -171,6 +171,9 @@ kubeScheduler:
   enabled: false
 
 grafana:
+  serviceMonitor:
+    labels:
+      release: kube-prometheus-stack
   sidecar:
     datasources:
       defaultDatasourceEnabled: true
@@ -178,6 +181,3 @@ grafana:
     - name: Loki
       type: loki
       url: http://loki-distributed-query-frontend.monitoring:3100
-  #   isDefault: false
-  #   jsonData:
-  #     maxLines: 1000
