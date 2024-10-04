@@ -163,12 +163,12 @@ alertmanager:
       - channel: '#infra-alerts'
         send_resolved: true
 
-kubeControllerManager:
-  enabled: false
-kubeEtcd:
-  enabled: false
-kubeScheduler:
-  enabled: false
+# kubeControllerManager:
+#   enabled: false
+# kubeEtcd:
+#   enabled: false
+# kubeScheduler:
+#   enabled: false
 
 grafana:
   serviceMonitor:
