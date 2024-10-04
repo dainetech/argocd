@@ -1,6 +1,6 @@
 config:
   clients:
-    - url: http://loki-loki-distributed-gateway/loki/api/v1/push
+    - url: http://loki-distributed-gateway/loki/api/v1/push
 
 serviceMonitor:
   enabled: true
