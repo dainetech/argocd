@@ -169,3 +169,13 @@ kubeEtcd:
   enabled: false
 kubeScheduler:
   enabled: false
+
+grafana:
+  additionalDataSources:
+  - name: Loki
+    type: Loki
+    access: proxy
+    url: loki-stack.logging.svc.cluster.local:3100
+    isDefault: false
+    jsonData:
+      maxLines: 1000
