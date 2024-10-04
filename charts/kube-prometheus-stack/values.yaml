@@ -149,13 +149,18 @@ alertmanager:
       slack_api_url: 'https://hooks.slack.com/services/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'
 
     route:
-      receiver: 'slack-notifications'
+      receiver: 'slack'
       repeat_interval: 1s
+      routes:
+        - matchers:
+            - severity="critical"
+          receiver: 'slack'
+          continue: true
 
     receivers:
-    - name: 'slack-notifications'
+    - name: 'slack'
       slack_configs:
-      - channel: '#infra-alerts'
+      - channel: '#monitor'
         send_resolved: true
         api_url: 'https://hooks.slack.com/services/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'
 
