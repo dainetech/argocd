@@ -147,7 +147,7 @@ alertmanager:
 
     global:
       resolve_timeout: 1m
-      slack_api_url: https://hooks.slack.com/services/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
+      slack_api_url: https://hooks.slack.com/services/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
 
     route:
       group_by: ['namespace']
@@ -165,7 +165,7 @@ alertmanager:
       slack_configs:
       - channel: '#infra-alerts'
         send_resolved: true
-        api_url: https://hooks.slack.com/services/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
+        api_url: https://hooks.slack.com/services/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
 
     templates:
     - '/etc/alertmanager/config/*.tmpl'
