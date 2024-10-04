@@ -160,7 +160,7 @@ alertmanager:
     receivers:
     - name: 'slack'
       slack_configs:
-      - channel: '#infra-alerts'
+      - channel: 'infra-alerts'
         send_resolved: true
         api_url: 'https://hooks.slack.com/services/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'
 
