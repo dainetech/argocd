@@ -1,8 +1,12 @@
+config:
+  clients:
+    - url: http://loki-loki-distributed-gateway/loki/api/v1/push
+
 serviceMonitor:
-  enabled: false
+  enabled: true
   
   prometheusRule:
-    enabled: false
+    enabled: true
     rules:
      - alert: PromtailRequestErrors
        expr: 100 * sum(rate(promtail_request_duration_seconds_count{status_code=~"5..|failed"}[1m])) by (namespace, job, route, instance) / sum(rate(promtail_request_duration_seconds_count[1m])) by (namespace, job, route, instance) > 10
