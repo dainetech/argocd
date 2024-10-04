@@ -144,21 +144,13 @@ defaultRules:
 
 alertmanager:
   config:
-
     global:
       resolve_timeout: 1m
       slack_api_url: https://hooks.slack.com/services/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
 
     route:
-      group_by: ['namespace']
-      group_wait: 30s
-      group_interval: 5m
-      repeat_interval: 12h
       receiver: 'slack-notifications'
-      routes:
-      - receiver: 'slack-notifications'
-        matchers:
-          - alertname = "Watchdog"
+      repeat_interval: 1s
 
     receivers:
     - name: 'slack-notifications'
@@ -166,9 +158,6 @@ alertmanager:
       - channel: '#infra-alerts'
         send_resolved: true
         api_url: https://hooks.slack.com/services/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
-
-    templates:
-    - '/etc/alertmanager/config/*.tmpl'
 
 kubeControllerManager:
   enabled: false
