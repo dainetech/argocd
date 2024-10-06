@@ -1,3 +1,7 @@
+loki:
+  storageConfig:
+    filesystem: null
+
 serviceMonitor:
   enabled: true
 
