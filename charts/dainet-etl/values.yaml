@@ -1,0 +1,20 @@
+namespace: dainet-etl
+
+deployment:
+  name: dainet-etl
+  replicas: 1
+  app: dainet-etl
+  imagePullSecret: my-registry-secret
+  containerName: dainet-etl
+  image: doryosisinay/dainet-etl:devel-5ca11ab
+  imagePullPolicy: Always
+  containerPort: 3001
+  secretRefName: web-application
+  configMapRefName: dainet-etl-config
+
+service:
+  name: dainet-etl
+  type: ClusterIP
+  port: 3001
+  targetPort: 3001
+  app: dainet-etl

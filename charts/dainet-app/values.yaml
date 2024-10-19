@@ -1,3 +1,5 @@
+namespace: dainet-app
+
 configmap:
   name: macro-kit-config
   nodeCacheTimer: "3600"
