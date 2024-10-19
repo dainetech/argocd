@@ -1,0 +1,24 @@
+configmap:
+  name: macro-kit-config
+  nodeCacheTimer: "3600"
+  isDev: "false"
+  staticUrl: https://macro-kit.com
+
+deployment:
+  name: dainet
+  replicas: 2
+  app: dainet
+  imagePullSecret: my-registry-secret
+  containerName: dainet
+  image: doryosisinay/dainet-app:devel-6d15576
+  imagePullPolicy: Always
+  containerPort: 3000
+  secretRefName: web-application
+  configMapRefName: dainet-config
+
+service:
+  name: dainet
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+  app: dainet

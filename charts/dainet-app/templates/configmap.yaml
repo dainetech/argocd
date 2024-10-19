@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmap.name }}
+data:
+  NODE_CACHE_TIMER: "{{ .Values.configmap.nodeCacheTimer }}"
+  IS_DEV: "{{ .Values.configmap.isDev }}"
+  staticUrl: {{ .Values.configmap.staticUrl }}
