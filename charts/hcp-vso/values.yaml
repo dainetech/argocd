@@ -1,6 +1,6 @@
 defaultAuthMethod:
   enabled: true
-  namespace: "vault"
+  namespace: "web-app"
   allowedNamespaces: []
   method: kubernetes
   mount: kubernetes
