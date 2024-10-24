@@ -9,7 +9,7 @@ spec:
   sources:
   - repoURL: https://helm.releases.hashicorp.com
     chart: vault-secrets-operator
-    targetRevision: 0.28.1
+    targetRevision: 0.9.0
     helm:
       valueFiles:
       - $values/charts/hcp-vso/values.yaml
