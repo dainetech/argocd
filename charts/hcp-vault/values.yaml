@@ -8,7 +8,7 @@ server:
   standalone:
     enabled: true
 injector:
-  enabled: false
+  enabled: true
 ui:
   enabled: true
   publishNotReadyAddresses: true
