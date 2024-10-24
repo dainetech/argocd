@@ -1,3 +1,15 @@
+defaultAuthMethod:
+  enabled: true
+  namespace: "vault"
+  allowedNamespaces: "*"
+  method: kubernetes
+  mount: kubernetes
+  kubernetes:
+    role: "fakeapp"
+    serviceAccount: default
+    tokenAudiences: vault
+
+  # Vault JWT auth method specific configuration
 defaultVaultConnection:
   enabled: true
   address: "http://vault-internal.vault.svc.cluster.local:8200"
