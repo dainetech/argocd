@@ -1,7 +1,7 @@
 defaultAuthMethod:
   enabled: true
   namespace: "vault"
-  allowedNamespaces: "*"
+  allowedNamespaces: []
   method: kubernetes
   mount: kubernetes
   kubernetes:
