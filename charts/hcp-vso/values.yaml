@@ -7,7 +7,7 @@ defaultAuthMethod:
   kubernetes:
     role: "fakeapp"
     serviceAccount: default
-    tokenAudiences: vault
+    tokenAudiences: [vault]
 
   # Vault JWT auth method specific configuration
 defaultVaultConnection:
